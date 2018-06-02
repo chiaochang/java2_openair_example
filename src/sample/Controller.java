@@ -55,7 +55,7 @@ public class Controller {
 
         for (Country c:countries)
         {
-            if (selected == c.getName())
+            if (selected.equals(c.getName()))
             {
                 citiesCount.setText(Integer.toString(c.getCities()));
             }
