@@ -80,18 +80,19 @@ public class Controller {
         //and obj.lastUpdated
 
         //Here we will format the data to the way that the chart likes it
-        String label = "";
+        String xlabel = "";
         String ylabel = "";
         XYChart.Series<String, Float> series = new XYChart.Series();
         for (Latest l:latest_array){
             series.getData().add(new XYChart.Data(l.lastUpdated.toString(), l.value));
-            label = l.parameter;
+            xlabel = l.location;
+            ylabel = l.parameter;
         }
 
         line_chart.getData().clear();
         line_chart.getData().add(series);
-        line_chart.getXAxis().setLabel("Time");
-        line_chart.getYAxis().setLabel("Value " +label);
+        line_chart.getXAxis().setLabel("Time "+xlabel);
+        line_chart.getYAxis().setLabel("Value " +ylabel);
     }
     public Controller(){
         countries = Country.getCountries();

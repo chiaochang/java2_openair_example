@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <ListView fx:id="list" layoutX="50.0" layoutY="96.0" onMousePressed="#selected" prefHeight="257.0" prefWidth="266.0" />
+      <ListView fx:id="list" layoutX="50.0" layoutY="96.0" onMousePressed="#selected" prefHeight="425.0" prefWidth="266.0" />
       <Label layoutX="40.0" layoutY="38.0" text="Cities:">
          <font>
             <Font name="System Bold" size="25.0" />
@@ -25,7 +25,7 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <LineChart fx:id="line_chart" layoutX="357.0" layoutY="92.0" prefHeight="281.0" prefWidth="387.0">
+      <LineChart fx:id="line_chart" layoutX="357.0" layoutY="92.0" prefHeight="449.0" prefWidth="387.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>

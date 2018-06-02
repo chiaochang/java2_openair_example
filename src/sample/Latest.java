@@ -20,11 +20,13 @@ public class Latest {
     Float value;
     String parameter;
     Date lastUpdated;
+    String location;
 
-    public Latest (String parameter, Float value, Date lastUpdated){
+    public Latest (String parameter, Float value, Date lastUpdated, String location){
         this.parameter = parameter;
         this.value = value;
         this.lastUpdated = lastUpdated;
+        this.location = location;
     }
 
     public static ArrayList<Latest> getLatest (String country_code) {
@@ -69,7 +71,7 @@ public class Latest {
                 DateFormat f = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'.000Z'");
                 try{
                     Date date = f.parse(lastupdated);
-                    Latest l = new Latest(current_parameter, value, date);
+                    Latest l = new Latest(current_parameter, value, date, current_city);
                     return_value.add(l);
                 } catch (Exception e){
                     e.printStackTrace();
