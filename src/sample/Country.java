@@ -21,7 +21,7 @@ public class Country {
         String data = readFromAPI();
 
         Gson gson = new Gson();
-        System.out.println(data);
+        //System.out.println(data);
         JsonObject parsed = gson.fromJson(data, JsonObject.class);
         JsonArray countries = parsed.getAsJsonArray("results");
 
